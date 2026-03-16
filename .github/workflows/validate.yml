@@ -11,10 +11,9 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v7
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: sudo apt-get update && sudo apt-get install -y shellcheck
-      - run: ./scripts/validate.sh
+      - run: ./vendor/agent-validate/validate.sh .
