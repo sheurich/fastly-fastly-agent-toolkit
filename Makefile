@@ -1,7 +1,7 @@
 .PHONY: validate skillscheck ci
 
 validate:
-	./scripts/validate.sh
+	./vendor/agent-validate/validate.sh .
 
 skillscheck:
 	uvx skillscheck skills
